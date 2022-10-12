@@ -2,8 +2,8 @@ name: production
 
 on:
   push:
-    branches-ignore:
-      - '*'
+    branches:
+    - !.*
 
 jobs:
   # This workflow contains a single job called "build"
