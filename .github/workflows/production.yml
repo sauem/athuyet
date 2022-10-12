@@ -3,7 +3,7 @@ name: production
 on:
   push:
     branches:
-      - !.*
+      - *
 
 jobs:
   # This workflow contains a single job called "build"
