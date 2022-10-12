@@ -1,8 +1,7 @@
-ame: development
-
+name: development
 on:
-  workflow_runs:
-    workflow:
+  workflow_run:
+    workflows:
       - build
     branches:
       - development
@@ -11,7 +10,7 @@ on:
 
 jobs:
   # This workflow contains a single job called "build"
-  build-development:
+  development:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
