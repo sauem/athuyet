@@ -1,0 +1,19 @@
+ame: development
+
+on:
+  workflow_runs:
+    workflow:
+      - build
+    branches:
+      - development
+    types:
+      - completed
+
+jobs:
+  # This workflow contains a single job called "build"
+  build-development:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run a one-line script
+        run: echo this is deploy development
