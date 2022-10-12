@@ -7,7 +7,7 @@ on:
 
 jobs:
   # This workflow contains a single job called "build"
-  build-porduction:
+  porduction:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
