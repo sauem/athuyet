@@ -20,6 +20,9 @@ jobs:
       
       - name: attach workspace
         uses: actions/download-artifact@v3
+        with:
+          name: release
+          path: release.zip
      
       - name: list file
         run: ls -R
