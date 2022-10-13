@@ -24,3 +24,22 @@ jobs:
           name: release
           path: release.zip
         
+  development:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run a one-line script
+        run: echo this is deploy development
+      
+      - name: attach workspace
+        uses: actions/download-artifact@v3
+        with:
+          name: release
+          path: release.zip
+     
+      - name: list file
+        run: ls -R
+      # unzip project from build step
+      - name: unzip build project
+        run: unzip release.zip
