@@ -38,7 +38,8 @@ jobs:
           name: release
      
       - name: list file
-        run: ls -R
+        run: ls
+        
       # unzip project from build step
-      - name: unzip build project
-        run: unzip release.zip
+      #- name: unzip build project
+      #  run: unzip release.zip
