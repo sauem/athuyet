@@ -22,9 +22,6 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: release
-     
+          
       - name: list file
-        run: ls -R
-#       # unzip project from build step
-#       - name: unzip build project
-#         run: unzip release.zip
+        run: ls
