@@ -13,3 +13,14 @@ jobs:
       - name: testing
         run: echo testing success
         
+              # zip build project
+      - name: zip release for deploy
+        run: zip release.zip ./* -r
+
+      # Save workspace for other jobs
+      - name: Save workspace for other jobs
+        uses: actions/upload-artifact@v3
+        with:
+          name: release
+          path: release.zip
+        
