@@ -50,7 +50,7 @@ jobs:
         
   production:
     runs-on: ubuntu-latest
-    needs: [build, development]
+    needs: build
     if: github.ref_type == 'tag' && contains(github.ref_name, 'v[0-9]+(\.[0-9]+)*')
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
