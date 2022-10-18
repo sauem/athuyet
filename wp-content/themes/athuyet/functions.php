@@ -203,7 +203,7 @@ function twentytwenty_register_styles() {
 
 }
 
-add_action( 'wp_enqueue_scripts', 'twentytwenty_register_styles' );
+#add_action( 'wp_enqueue_scripts', 'twentytwenty_register_styles' );
 
 /**
  * Register and Enqueue Scripts.
@@ -223,7 +223,7 @@ function twentytwenty_register_scripts() {
 
 }
 
-add_action( 'wp_enqueue_scripts', 'twentytwenty_register_scripts' );
+#add_action( 'wp_enqueue_scripts', 'twentytwenty_register_scripts' );
 
 /**
  * Fix skip link focus in IE11.

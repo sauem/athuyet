@@ -125,6 +125,20 @@
     </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.41/vue.runtime.global.prod.min.js"
+        integrity="sha512-q8shMlvl/Tm4iJz2XCaKSn/mRkBeOlTfTZ4SGehABN3tEXaasAn8Ez0c4e4nxAyRPk8Jcc1U40zFjKsOmGPamg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vuex/4.1.0/vuex.global.prod.min.js"
+        integrity="sha512-92cbSDxR33ukAk6UuekriSTT5z+rW1o7ak6nyzRm/7MBWGUFtqY4MV5buCd/p397sMLseKD8bHWFHTASWsdo3A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!---->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.41/vue.global.prod.min.js"-->
+<!--        integrity="sha512-0bHFSq8ASKChkYlLEzEnqpH3H/RSqL7UvhhOmSPz5JxozXuMge8JtNuv/0cgZRv2ZUR0GO9rdo576xUbKcrNIg=="-->
+<!--        crossorigin="anonymous" referrerpolicy="no-referrer"></script>-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/vuex/4.1.0/vuex.global.prod.min.js"-->
+<!--        integrity="sha512-92cbSDxR33ukAk6UuekriSTT5z+rW1o7ak6nyzRm/7MBWGUFtqY4MV5buCd/p397sMLseKD8bHWFHTASWsdo3A=="-->
+<!--        crossorigin="anonymous" referrerpolicy="no-referrer"></script>-->
+<script src="<?= ASSET ?>/js/jquery.min.js"></script>
 <script src="<?= ASSET ?>/js/bootstrap.bundle.min.js"></script>
 <script src="<?= ASSET ?>/js/jquery.meanmenu.js"></script>
 <script src="<?= ASSET ?>/js/mixitup.min.js"></script>
@@ -133,4 +147,4 @@
 <script src="<?= ASSET ?>/js/form-validator.min.js"></script>
 <script src="<?= ASSET ?>/js/contact-form-script.js"></script>
 <script src="<?= ASSET ?>/js/jquery.ajaxchimp.min.js"></script>
-<script src="<?= ASSET ?>/js/main.js"></script>
+<script src="<?= ASSET ?>/js/main.js?v=<?= time() ?>"></script>
