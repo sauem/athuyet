@@ -70,3 +70,8 @@ function getToDay()
     }
     return $name . ", {$date['mday']}/{$date['mon']}/{$date['year']}";
 }
+
+function setting($key)
+{
+    return get_post_meta(47, $key, true);
+}

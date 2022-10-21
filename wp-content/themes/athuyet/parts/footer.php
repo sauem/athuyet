@@ -4,35 +4,56 @@
         <div class="row">
             <div class="col-lg-4 col-md-6">
                 <div class="single-footer-widget">
-                    <h3>About The Magazine</h3>
+                    <h3 class="text-uppercase"><?php bloginfo(); ?></h3>
                     <div class="contact-info">
-                        <p>You can reach us via phone, email and website. Or send us some message through our Contact
-                            Page.</p>
+                        <p><?php bloginfo('description'); ?></p>
                         <ul>
-                            <li><i class="icofont-google-map"></i> 27 Division St, New York, NY 10002, USA</li>
-                            <li><i class="icofont-phone"></i> <a href="#">+(587) 234-4521</a></li>
-                            <li><i class="icofont-envelope"></i> <a href="#"><span class="__cf_email__"
-                                                                                   data-cfemail="87eee9e1e8c7f4eee9eaf2e9a9e4e8ea">[email&#160;protected]</span></a>
+                            <li>
+                                <i class="icofont-google-map"></i>
+                                <?= get_post_meta(47, 'address1', true) ?>
+                            </li>
+                            <li>
+                                <i class="icofont-google-map"></i>
+                                <?= get_post_meta(47, 'address2', true) ?>
+                            </li>
+                            <li>
+                                <i class="icofont-phone"></i>
+                                <a href="tel:<?= get_post_meta(47, 'hotline1', true) ?>">
+                                    <?= get_post_meta(47, 'hotline1', true) ?>
+                                </a> |
+                                <a href="tel:<?= get_post_meta(47, 'hotline2', true) ?>">
+                                    <?= get_post_meta(47, 'hotline2', true) ?>
+                                </a>
+                            </li>
+
+                            <li>
+                                <i class="icofont-envelope"></i>
+                                <a href="mailto:<?= get_post_meta(47, 'email', true) ?>">
+                                    <span class="__cf_email__">
+                                      <?= get_post_meta(47, 'hotline2', true) ?>
+                                    </span>
+                                </a>
                             </li>
                         </ul>
                     </div>
-                    <div class="connect-social">
-                        <p>We're social, connect with us:</p>
-                        <ul>
-                            <li>
-                                <a href="#" target="_blank"><i class="icofont-facebook"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 offset-lg-0 offset-md-3">
+                <div class="single-footer-widget">
+                    <h3>DỊCH VỤ BÁN HÀNG</h3>
+                    <div class="contact-info">
+                        <ul class="p-0">
+                            <li class="mb-1 p-0">
+                                <a href="#">Chính sách bảo hành</a>
                             </li>
-                            <li>
-                                <a href="#" target="_blank"><i class="icofont-twitter"></i></a>
+                            <li class="mb-1 p-0">
+                                <a href="#">Chính sách bảo mật thông tin</a>
                             </li>
-                            <li>
-                                <a href="#" target="_blank"><i class="icofont-linkedin"></i></a>
+                            <li class="mb-1 p-0">
+                                <a href="#">Chính sách giải quyết khiếu nại</a>
                             </li>
-                            <li>
-                                <a href="#" target="_blank"><i class="icofont-instagram"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank"><i class="icofont-rss"></i></a>
+                            <li class="mb-1 p-0">
+                                <a href="#">Hướng dẫn mua hàng</a>
                             </li>
                         </ul>
                     </div>
@@ -40,69 +61,48 @@
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="single-footer-widget">
-                    <h3>Latest News</h3>
-                    <div class="footer-latest-news-list">
-                        <div class="media latest-news-media align-items-center">
-                            <a href="#"> <img src="<?= ASSET ?>/img/small-2.jpg" alt="image"/> </a>
-                            <div class="content">
-                                <ul>
-                                    <li><i class="icofont-calendar"></i> March 22, 2021</li>
-                                    <li>
-                                        <a href="#"><i class="icofont-comment"></i> 12</a>
-                                    </li>
-                                </ul>
-                                <h3><a href="#">Gloost Better They Are With A Featured</a></h3>
-                            </div>
-                        </div>
-                        <div class="media latest-news-media align-items-center">
-                            <a href="#"> <img src="<?= ASSET ?>/img/small-4.jpg" alt="image"/> </a>
-                            <div class="content">
-                                <ul>
-                                    <li><i class="icofont-calendar"></i> March 22, 2021</li>
-                                    <li>
-                                        <a href="#"><i class="icofont-comment"></i> 12</a>
-                                    </li>
-                                </ul>
-                                <h3><a href="#">Gloost Better They Are With A Featured</a></h3>
-                            </div>
-                        </div>
-                        <div class="media latest-news-media align-items-center">
-                            <a href="#"> <img src="<?= ASSET ?>/img/small-3.jpg" alt="image"/> </a>
-                            <div class="content">
-                                <ul>
-                                    <li><i class="icofont-calendar"></i> March 22, 2021</li>
-                                    <li>
-                                        <a href="#"><i class="icofont-comment"></i> 12</a>
-                                    </li>
-                                </ul>
-                                <h3><a href="#">Gloost Better They Are With A Featured</a></h3>
-                            </div>
-                        </div>
+                    <h3>VỀ CHÚNG TÔI</h3>
+                    <div class="contact-info">
+                        <ul class="p-0">
+                            <li class="mb-1 p-0">
+                                <a href="#">Giới thiệu về chúng tôi</a>
+                            </li>
+                            <li class="mb-1 p-0">
+                                <a href="#">Liên hệ</a>
+                            </li>
+                            <li class="mb-1 p-0">
+                                <a href="#">Tin tức</a>
+                            </li>
+                        </ul>
                     </div>
+                    <div class="connect-social">
+                        <p>Kết nối với chúng tôi:</p>
+                        <ul>
+                            <li>
+                                <a href="<?= setting('facebook') ?>"
+                                   target="_blank">
+                                    <i class="icofont-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="<?= setting('twitter') ?>" target="_blank"><i class="icofont-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="<?= setting('linkedin') ?>" target="_blank"><i
+                                            class="icofont-linkedin"></i></a>
+                            </li>
+                            <li>
+                                <a href="<?= setting('instagram') ?>" target="_blank"><i class="icofont-instagram"></i></a>
+                            </li>
+                            <li>
+                                <a href="<?= setting('youtube') ?>" target="_blank"><i class="icofont-youtube"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 offset-lg-0 offset-md-3">
-                <div class="single-footer-widget">
-                    <h3>Twitter Feed</h3>
-                    <div class="twitter-tweet-list">
-                        <div class="single-tweet">
-                            <i class="icofont-twitter"></i> <span>About 2 days ago</span>
-                            <p>Conference Event WordPress Theme -> 2 New Home Added <a href="#">https://tt.co/Rn00zM5q7gY70</a>
-                            </p>
-                        </div>
-                        <div class="single-tweet">
-                            <i class="icofont-twitter"></i> <span>About 2 days ago</span>
-                            <p>Conference Event WordPress Theme -> 2 New Home Added <a href="#">https://tt.co/Rn00zM5q7gY70</a>
-                            </p>
-                        </div>
-                        <div class="single-tweet">
-                            <i class="icofont-twitter"></i> <span>About 2 days ago</span>
-                            <p>Conference Event WordPress Theme -> 2 New Home Added #wordpress #event #conference
-                                #wordpresstheme <a href="#">https://tt.co/Rn00zM5q7gY70</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </div>
     <div class="copyright-area">
