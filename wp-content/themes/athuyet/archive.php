@@ -72,15 +72,18 @@ get_header();
                     <h2><?= single_cat_title() ?></h2>
                 </div>
                 <?php
-                query_posts([
-                    'posts_per_page' => 12,
+                $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+                var_dump($paged);
+                $loop =  new WP_Query([
+                    'posts_per_page' => 3,
                     'sort' => 'desc',
                     'sortby' => 'date',
                     'cat' => $cat,
-                    'offset' => 6
+                    //'offset' => 12,
+                    'paged' => $paged
                 ]);
-                if (have_posts()) :
-                    while (have_posts()):the_post();
+                if ($loop->have_posts()) :
+                    while ($loop->have_posts()): $loop->the_post();
                         ?>
                         <div class="single-category-news">
                             <div class="row m-0 align-items-center">
@@ -110,19 +113,28 @@ get_header();
                                 </div>
                             </div>
                         </div>
-                    <?php
-                    endwhile;endif;
-                wp_reset_query();
-                ?>
+                    <?php endwhile;endif;?>
 
-                <div class="pagination-area">
-                    <a href="#" class="prev page-numbers"><i class="icofont-double-left"></i></a>
-                    <a href="#" class="page-numbers">1</a>
-                    <span class="page-numbers current" aria-current="page">2</span>
-                    <a href="#" class="page-numbers">3</a>
-                    <a href="#" class="page-numbers">4</a>
-                    <a href="#" class="next page-numbers"><i class="icofont-double-right"></i></a>
-                </div>
+                <?php
+//                $big = 999999999;
+//                echo paginate_links([
+//                    'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+//                    'format' => '/?paged=%#%',
+//                    'current' => max( 1, get_query_var('paged') ),
+//                    'total' => $loop->max_num_pages])
+
+                getPaginate();
+                ?>
+                <?php wp_reset_postdata(); ?>
+
+                <!--<div class="pagination-area">-->
+                <!--    <a href="#" class="prev page-numbers"><i class="icofont-double-left"></i></a>-->
+                <!--    <a href="#" class="page-numbers">1</a>-->
+                <!--    <span class="page-numbers current" aria-current="page">2</span>-->
+                <!--    <a href="#" class="page-numbers">3</a>-->
+                <!--    <a href="#" class="page-numbers">4</a>-->
+                <!--    <a href="#" class="next page-numbers"><i class="icofont-double-right"></i></a>-->
+                <!--</div>-->
             </div>
 
             <div class="col-lg-4 col-md-12">

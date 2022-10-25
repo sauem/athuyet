@@ -43,41 +43,22 @@
 
                     <div class="article-content">
                         <?php the_content(); ?>
-
-                        <ul class="category">
-                            <li><span>Tags:</span></li>
-                            <?php
-                            $posttags = get_tags(['count' => true]);
-                            if (!empty($posttags)):
-
-                                foreach ($posttags as $tag) {
-                                    ?>
-                                    <li>
-                                        <a href="<?= get_term_link($tag->slug, 'post_tag') ?>">
-                                            <?= $tag->name ?>
-                                        </a>
-                                    </li>
-                                    <?php
-                                }
-                            endif; ?>
-                        </ul>
                     </div>
                 </div>
 
                 <div class="post-controls-buttons">
                     <div>
-                        <a href="#">Prev Post</a>
+                        <?= get_previous_post_link('%link', 'Trước đó', true) ?>
                     </div>
 
                     <div>
-                        <a href="#">Next Post</a>
+                        <?= get_next_post_link('%link', 'Tiếp theo', true) ?>
                     </div>
                 </div>
                 <?php
                 if ((is_single() || is_page()) && (comments_open() || get_comments_number()) && !post_password_required()) {
                     ?>
-                    <?php // comments_template(); ?>
-                    <?php
+                    <?php comments_template(); ?> <?php
                 }
                 ?>
             </div>

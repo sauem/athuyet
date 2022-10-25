@@ -96,24 +96,24 @@
         </ul>
 
     </section>
-    <?php
-    $posttags = get_tags(['count' => true]);
-    if (!empty($posttags)):
-        ?>
-        <section class="widget widget_tag_cloud">
-            <h3 class="widget-title">THẺ</h3>
-            <div class="tagcloud">
-                <?php
-                foreach ($posttags as $tag) {
-                    ?>
-                    <a href="<?= get_term_link($tag->slug, 'post_tag') ?>">
-                        <?= $tag->name ?> <span class="tag-link-count"> (<?= $tag->count ?>)</span>
-                    </a>
-                    <?php
-                }
-                ?>
-            </div>
-        </section>
-    <?php endif; ?>
+<!--    --><?php
+//    $posttags = get_tags(['count' => true]);
+//    if (!empty($posttags)):
+//        ?>
+<!--        <section class="widget widget_tag_cloud">-->
+<!--            <h3 class="widget-title">THẺ</h3>-->
+<!--            <div class="tagcloud">-->
+<!--                --><?php
+//                foreach ($posttags as $tag) {
+//                    ?>
+<!--                    <a href="--><?php //= get_term_link($tag->slug, 'post_tag') ?><!--">-->
+<!--                        --><?php //= $tag->name ?><!-- <span class="tag-link-count"> (--><?php //= $tag->count ?><!--)</span>-->
+<!--                    </a>-->
+<!--                    --><?php
+//                }
+//                ?>
+<!--            </div>-->
+<!--        </section>-->
+<!--    --><?php //endif; ?>
 
 </aside>
